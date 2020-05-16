@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/colorPrimary"
+tools:context=".splash">
+
+<!-- The primary full-screen view. This can be replaced with whatever view
+     is needed to present your content, e.g. VideoView, SurfaceView,
+     TextureView, etc. -->
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".splash"
+    android:background="@color/colorPrimary"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+
+
+
+
+        <TextView
+            android:id="@+id/checkinta"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_above="@+id/fullscreen_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:text="No Internet connection, Please reconnect and restart the App again.."/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/housekeeperslogo"
+            />
+
+        <ProgressBar
+
+            android:id="@+id/progressBar1xxc"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/fullscreen_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/colorAccent"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+</FrameLayout>

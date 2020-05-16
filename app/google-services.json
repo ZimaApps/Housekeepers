@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "333688216551",
+    "firebase_url": "https://housekeepers-525cc.firebaseio.com",
+    "project_id": "housekeepers-525cc",
+    "storage_bucket": "housekeepers-525cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333688216551:android:c4c9a83c9ee597d6c7fb42",
+        "android_client_info": {
+          "package_name": "tz.co.nyotaapps.housekeeper.housekeeper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333688216551-3rdnebnajap0cljmslje0tvbegt7o5bd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6vx5onuGQv5uNzHszJFNJrYE02PGV3WE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333688216551-3rdnebnajap0cljmslje0tvbegt7o5bd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

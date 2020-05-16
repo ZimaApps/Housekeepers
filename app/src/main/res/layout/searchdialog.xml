@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12sp"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Housekeepers"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By Gender"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/firstx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setgenderwote"
+                android:text="Any"/>
+            <RadioButton
+                android:id="@+id/secondx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setgenderfemale"
+                android:text="Female"/>
+
+            <RadioButton
+                android:id="@+id/thirdx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setgendermale"
+                android:text="Male"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/b"
+        android:layout_below="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="8dp"
+            android:hint="By Country OR State">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/keyword"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/closex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="30dip"
+            android:paddingRight="26dip"
+            android:singleLine="true"
+            android:text="CANCEL"
+            android:textSize="13dip" />
+
+    <Button
+        android:id="@+id/addsubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="30dip"
+        android:paddingRight="26dip"
+        android:singleLine="true"
+        android:text="SEARCH"
+        android:textSize="13dip" />
+
+    </LinearLayout>
+
+</RelativeLayout>

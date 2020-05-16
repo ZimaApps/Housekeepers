@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name" translatable="false">HouseKeepers</string>
+
+
+    <string name="notification_channel_id" translatable="false">124</string>
+
+
+    <string name="youAreNotUpdatedTitle" translatable="false">This App needs to be updated</string>
+    <string name="youAreNotUpdatedMessage" translatable="false">There is a new Version of this App, Please update to V.</string>
+    <string name="youAreNotUpdatedMessage1" translatable="false"> Now</string>
+
+
+    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is not available on this phone.</string>
+    <string name="googlepay_status_checking" translatable="false">Checking if Google Pay is available...</string>
+    <string name="payments_show_name" translatable="false">Successfully received payment data for %s!</string>
+
+
+</resources>

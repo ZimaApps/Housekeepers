@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "tz.co.nyotaapps.housekeeper.housekeeper"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        useLibrary 'org.apache.http.legacy'
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+        }
+    }
+
+
+
+    packagingOptions {
+        pickFirst 'LICENSE-EDL-1.0.txt'
+        pickFirst 'LICENSE-EPL-1.0.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude '**/Action.class'
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+
+        maven { url "https://jcenter.bintray.com" } //add this line
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    //implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+
+    //mobile number picker
+    implementation 'net.rimoto:intlphoneinput:1.0.1'
+
+    //form controll
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+    //implementation 'com.mobsandgeeks:android-saripaar:(latest version)'
+
+
+    // ... other project dependencies
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    //implementation 'com.google.android.gms:play-services-ads:18.1.1'
+
+    // ... other project dependencies
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.4'
+
+    // ... other project dependencies
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+
+
+    implementation 'com.facebook.fresco:fresco:2.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.7'
+
+    implementation 'com.myhexaville:smart-image-picker:1.0.4'
+    implementation 'com.google.firebase:firebase-core:17.4.1'
+    implementation 'com.google.firebase:firebase-appindexing:19.1.0'
+    implementation 'com.google.firebase:firebase-database:19.3.0'
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
+    implementation "com.android.support:support-compat:29.0.0"
+
+    implementation "com.karumi:dexter:5.0.0"
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+
+    implementation('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
+
+
+    implementation 'com.android.support:cardview-v7:29.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //implementation 'com.google.android.gms:play-services-ads:18.0.0'
+    //implementation 'com.google.firebase:firebase-config:18.0.1'
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+
+    implementation 'com.firebase:firebase-client-android:2.5.2+'
+    implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.facebook.fresco:fresco:2.0.0'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+
+
+}
